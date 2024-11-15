@@ -1,0 +1,103 @@
+
+{% extends "layout.html" %}
+{% block content %}
+  
+<div class="text-center">
+  <div>
+    <h2><br><br> Welcome to our ultimate search page! </h2>
+    <p>Compare items from all your favorite websites in one spot! 🛍️💻</p>
+    <p>Find the best deals, latest trends, and top-rated products effortlessly. 💫</p>
+    <p>Why hop around when you can shop smart? Let's get started! 🚀<br><br></p>
+  </div>
+</div>
+
+<div class="text-center">
+  <form class="search-box" action="/search" method="post"> <!-- Corrected action attribute -->
+    <div class="input-group mb-3">
+      <input type="text" name="nm" class="form-control rounded-pill" placeholder="Search..." aria-label="Search" aria-describedby="search-icon"/>
+      <div class="input-group-append">
+        <button class="btn btn-primary rounded-pill" type="submit" id="search-icon"><i class="fas fa-search"></i></button>
+      </div>
+    </div>
+    
+    <!-- Rating input included inside the same form -->
+    <div class="text-center">
+      <div class="rating-slider">
+        <h4>Minimum rating:</h4>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="rating" id="rating-1" value="1">
+          <label class="form-check-label" for="rating-1">
+            <span class="sr-only">1 star</span>
+            <i class="fas fa-star"></i>
+          </label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="rating" id="rating-2" value="2">
+          <label class="form-check-label" for="rating-2">
+            <span class="sr-only">2 stars</span>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="rating" id="rating-3" value="3">
+          <label class="form-check-label" for="rating-3">
+            <span class="sr-only">3 stars</span>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="rating" id="rating-4" value="4">
+          <label class="form-check-label" for="rating-4">
+            <span class="sr-only">4 stars</span>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="rating" id="rating-5" value="5">
+          <label class="form-check-label" for="rating-5">
+            <span class="sr-only">5 stars</span>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </label>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- rating slider-->
+    <div class="text-center">
+      <div class="rating-slider">
+        <h4>Minimum Price:</h4>
+        <!-- Added min-rating input box -->
+        <input type="number" name="min_rating" id="min-rating" class="form-control" value="1" min="0" max="10000000000" step="1">
+        <!-- <div class="range-slider">
+          <input type="range" name="rating" id="rating-range" min="1" max="5" value="1" oninput="updateValues(this.value, 'min-rating', 'max-rating')">
+        </div> -->
+        <!-- Added max-rating input box -->
+        <h4>Maximum Price:</h4>
+        <input type="number" name="max_rating" id="max-rating" class="form-control" value="5" min="0" max="10000000000" step="1">
+      </div>
+    </div>
+
+
+  </form>
+</div>
+
+
+<script>
+  // Function to update the min-rating and max-rating input boxes
+  function updateValues(value, minId, maxId) {
+    document.getElementById(minId).value = value;
+    document.getElementById(maxId).value = parseInt(value) + 1;
+  }
+</script>
+{% endblock content %}

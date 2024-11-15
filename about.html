@@ -1,0 +1,94 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="container">
+    <h1>About CompareNest</h1>
+
+    <p>Welcome to <strong>CompareNest</strong>, your ultimate destination for comparing prices and finding the best deals from leading online retailers such as Amazon and Flipkart. At <strong>CompareNest</strong>, we understand the importance of making informed purchasing decisions, which is why we've created a user-friendly platform to help you find the products you love at the best prices available.</p>
+    
+    <h2>Reviews</h2>
+    <div class="moving-reviews">
+        <ul>
+            <li>Great service! Found amazing deals!</li>
+            <li>Love the sorting options. Makes finding deals so easy!</li>
+            <li>Highly recommended for anyone looking to save money!</li>
+        </ul>
+    </div>
+
+    <h2>Our Mission</h2>
+    <p>Our mission at <strong>CompareNest</strong> is simple: to empower consumers with the tools and information they need to shop smart and save money. We believe that everyone deserves access to transparent and unbiased price comparison services, enabling them to make confident decisions about their purchases.</p>
+
+    <h2>Features and Benefits</h2>
+    <ul>
+        <li><strong>Comprehensive Comparison:</strong> Compare prices for a wide range of products from two of the largest online retailers in India – Amazon and Flipkart – all in one place.</li>
+        <li><strong>Sorting Options:</strong> Sort search results based on price and ratings to find the best deals and highest-rated products effortlessly.</li>
+        <li><strong>Real-Time Updates:</strong> Our website continuously updates product listings to reflect the latest prices and availability, so you never miss out on a great deal.</li>
+        <li><strong>User-Friendly Interface:</strong> Navigate our website with ease thanks to our intuitive design and user-friendly features, making your shopping experience seamless and enjoyable.</li>
+    </ul>
+
+    <h2>Privacy Policy and Terms of Service</h2>
+    <p>Your privacy and security are important to us. Please read our Privacy Policy and Terms of Service for more information on how we collect, use, and protect your data while using our website.</p>
+
+    <h2>Our Vision</h2>
+    <p>At <strong>CompareNest</strong>, our vision is to become the go-to destination for price comparison and shopping insights, helping consumers make informed decisions and save money on their purchases. We are committed to continuously improving our platform and expanding our services to meet the evolving needs of our users.</p>
+
+    <p>Thank you for choosing <strong>CompareNest</strong> for all your price comparison needs. Happy shopping!</p>
+</div>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f5f5f5;
+    }
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    h1, h2 {
+        color: #31dada;
+        margin-top: 30px;
+    }
+    p {
+        color: #333; /* Darker color for better contrast */
+        line-height: 1.6;
+        margin-bottom: 20px;
+    }
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+    li {
+        margin-bottom: 10px;
+    }
+    strong {
+        font-weight: bold;
+        color: #007bff;
+    }
+    /* Moving Reviews */
+    .moving-reviews {
+        position: relative;
+        overflow: hidden;
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        margin-top: 30px;
+    }
+    .moving-reviews ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        position: absolute;
+        top: 0;
+        animation: marquee 10s linear infinite;
+    }
+    .moving-reviews li {
+        margin-bottom: 10px;
+    }
+    @keyframes marquee {
+        0% { top: 100%; }
+        100% { top: -100%; }
+    }
+</style>
+{% endblock content %}

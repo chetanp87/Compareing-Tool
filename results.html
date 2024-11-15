@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+{% block content %}
+  <h5 text-align="center">displaying results</h5> 
+
+<div class="container-fluid">
+  <div class="row justify-content-center">
+    {% for i in range(0, products|length, 3) %}
+      <div class="col-md-4 mb-4">
+        <div class="row">KO
+          {% for j in range(i, i+3) %}
+            {% if j < products|length %}
+              <div class="col-md-12 mb-3">
+                <div class="card text-center h-100">
+                  <img class="card-img-top mx-auto d-block" style="height: 300px; object-fit: contain;" src="{{ products[j]['image'] }}" alt="{{ products[j]['name'] }}">
+                  <div class="card-body">
+                    <h4 class="card-title" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{{ products[j]['name'] }}</h4>
+                    <p class="card-text">Price: {{ products[j]['price'] }}</p>
+                    <p class="card-text">Rating: {{ products[j]['rating'] }}</p>
+                    <p class="card-text">Website: {% if "amazon" in products[j]['link'] %}Amazon{% else %}Flipkart{% endif %}</p>
+                    <a href="{{ products[j]['link'] }}" target="_blank" class="btn btn-light">View Product</a>
+                  </div>
+                </div>
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% endblock content %}

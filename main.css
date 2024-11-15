@@ -1,0 +1,109 @@
+
+    
+  body {
+  background-image: url('bgi.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  
+  }
+
+  h1 {
+      font-size: 40px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 600;
+      color: white;
+      text-align: center;
+  }
+
+  #banner{
+    width:100%;
+    height: 300px;
+    object-fit: cover;
+  }
+  .icon-bar {
+    background-color: #282A35;
+    color: #f1f1f1;
+    padding: 0;
+    letter-spacing: 10px;
+    font-family: 'Source Sans Pro Topnav', sans-serif;
+    font-size: 0;
+    top: 56px;
+    z-index: 2;
+    width: 100%;
+    scrollbar-width: none;
+  }
+
+  .icon-bar a {
+    color: white; 
+    font-size: 24px; 
+    margin-right: 10px; 
+  }
+
+  .icon-bar a:hover {
+    color: gray; 
+  }
+
+  .button {
+    margin : 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+    font-size:"60px";
+    
+  }
+  .container{
+    color:white;
+    justify-content: center;
+    
+  }
+  .p{
+    justify-content: center;
+  }
+
+  .h2{
+    justify-content: center;
+  }
+
+  footer {
+    background-color: whitesmoke;
+    padding: 25px;
+  }
+
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.center2{
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Define the golden color for selected stars */
+
+.rating-slider {
+  margin: 2rem 0;
+}
+
+.rating-slider .form-check-input {
+  display: none;
+}
+
+.rating-slider .form-check-label .fas.fa-star {
+  font-size: 2em; 
+}
+
+.rating-slider .form-check-input:checked + .form-check-label .fas.fa-star {
+  color: gold;
+}
+
+/* Define the default color for unselected stars */
+.rating-slider .form-check-input:not(:checked) + .form-check-label .fas.fa-star {
+  color: #ccc; /* You can change this color to match your design */
+}
